@@ -1,3 +1,17 @@
+# Picshare frontend rebuild
+
+Joining the existing backend to this new frontend, which will have the same functionality but use React Router instead of conditional rendering.
+
+## Steps
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
