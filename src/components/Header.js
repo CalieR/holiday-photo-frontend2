@@ -11,7 +11,7 @@ function Header() {
         <Link to="/login">Login</Link>
       </li>
       <li>
-        <Link to="/signin">Signin</Link>
+        <Link to="/signup">Signup</Link>
       </li>
       <li>
         <Link to="/topics">Topics</Link>
