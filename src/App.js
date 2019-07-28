@@ -8,7 +8,6 @@ import AlbumsPage from "./pages/albums/AlbumsPage";
 import Topics from "./components/Topics";
 
 // homepage looks like random background, has header with login/signup clickable links
-// if there is a token stored, home will display user page
 
 function App() {
   return (
