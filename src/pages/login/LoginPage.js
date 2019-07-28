@@ -1,17 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 import Login from "../../components/Login";
 
-const onLogin = (username, password) => {
-  console.log(username, password);
-};
+class LoginPage extends Component {
+  state = {
+    logged_in: false,
+    username: "",
+    password: ""
+  };
 
-function LoginPage() {
-  return (
-    <>
-      <h2>Login form</h2>
-      <Login loginHandler={onLogin} />
-    </>
-  );
+  onLogin = (username, password) => {
+    console.log(username, password);
+  };
+
+  render() {
+    return (
+      <>
+        <h2>Login form</h2>
+        <Login />
+      </>
+    );
+  }
 }
 
 export default LoginPage;
