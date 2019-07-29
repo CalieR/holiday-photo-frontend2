@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Login from "../../components/Login";
+import index from "../../services/api/auth/index";
 
 class LoginPage extends Component {
   state = {
@@ -8,15 +9,34 @@ class LoginPage extends Component {
     password: ""
   };
 
-  onLogin = (username, password) => {
-    console.log(username, password);
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  handleLogin = e => {
+    e.preventDefault();
+    index.login(this.state.username, this.state.password).then(data => {
+      if (data.error) {
+        alert(
+          "You have entered the wrong username or password.  Please check your details and try again"
+        );
+      } else {
+        localStorage.setItem("token", data.jwt);
+        this.setState({ logged_in: true, username: data.username });
+      }
+    });
   };
 
   render() {
     return (
       <>
         <h2>Login form</h2>
-        <Login />
+        <Login
+          handleChange={this.handleChange}
+          handleLogin={this.handleLogin}
+        />
       </>
     );
   }

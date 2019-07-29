@@ -2,15 +2,6 @@ import React from "react";
 
 import { Grid, Form, Button } from "semantic-ui-react";
 
-// props = {
-//   loginHandler: null
-// }
-
-// state = {
-//   username: "Bob",
-//   password: "123434234"
-// }
-
 // const defaultLoginHandler = () => {
 //   // do nothing
 // }
@@ -23,7 +14,7 @@ import { Grid, Form, Button } from "semantic-ui-react";
 //   }
 // }
 
-function Login() {
+function Login(props) {
   return (
     <Grid centered>
       <Form className="login-signup">
@@ -35,6 +26,7 @@ function Login() {
             name="username"
             placeholder="Username"
             required
+            onChange={props.handleChange}
           />
         </Form.Field>
         <Form.Field>
@@ -44,10 +36,13 @@ function Login() {
             name="password"
             placeholder="Password"
             required
+            onChange={props.handleChange}
           />
         </Form.Field>
 
-        <Button color="teal">Log In</Button>
+        <Button color="teal" onClick={props.handleLogin}>
+          Log In
+        </Button>
       </Form>
     </Grid>
   );
