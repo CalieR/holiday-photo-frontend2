@@ -25,6 +25,7 @@ class LoginPage extends Component {
       } else {
         localStorage.setItem("token", data.jwt);
         this.setState({ logged_in: true, username: data.username });
+        this.props.history.push("/albums");
       }
     });
   };
