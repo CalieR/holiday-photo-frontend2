@@ -25,10 +25,6 @@ function App() {
   );
 }
 
-// AuthenticatedRoute component returns a Route component
-// render() function of this Route component is responsible for rendering the Albums component (from props), or redirecting.
-// all this depends on presence of a token in local storage
-// what is in ...rest here??
 const AuthenticatedRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}

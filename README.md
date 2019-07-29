@@ -8,13 +8,15 @@ Joining the existing backend to this new frontend, which will have the same func
 1. Added an authenticated route to display an album page if a token is present in local storage
     https://dev.to/sophiedebenedetto/jwt-auth-with-phoenix-and-react-router-4 helped with this
 1. Reorganised the file structure with folders for components, pages and services
-1. IN PROGRESS: create handlers for the login form.  display the album page if an existing user details are entered
+1. Created handlers for the login form, connected to database.  
+1. Redirect from login page to the album page if login successful (using router props)
 
 
 
 
 
 
+-----------------------------------------------------------------------------------------------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
