@@ -1,8 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
 import Albums from "../../components/Albums";
+import index from "../../services/api/user/index";
 
-function AlbumsPage() {
-  return <Albums />;
+class AlbumsPage extends Component {
+  state = {
+    myAlbums: []
+  };
+
+  componentDidMount() {
+    this.getAlbums();
+  }
+
+  getAlbums = () => {
+    index.getUserProfile().then(user => {
+      this.setState({
+        myAlbums: user.albums
+      });
+    });
+  };
+
+  render() {
+    return <Albums myAlbums={this.state.myAlbums}/>;
+  }
 }
 
 export default AlbumsPage;
