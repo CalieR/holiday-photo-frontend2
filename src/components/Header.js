@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Logout from "./Logout";
+
 function Header() {
   return (
     <ul>
@@ -14,6 +16,9 @@ function Header() {
         <Link to="/signup">Signup</Link>
       </li>
       <li>
+        <Logout />
+      </li>
+      <li>
         <Link to="/topics">Topics</Link>
       </li>
     </ul>
@@ -21,3 +26,6 @@ function Header() {
 }
 
 export default Header;
+
+// logout:
+// button which clears the token and redirects to Home

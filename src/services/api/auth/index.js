@@ -15,12 +15,18 @@ const login = (username, password) => {
 };
 
 const getCurrentUser = token => {
-    return fetch(`${API_BASE_URL}/auth/show`, {
-      headers: { ...headers, Authorization: token }
-    }).then(res => res.json());
-  };
+  return fetch(`${API_BASE_URL}/auth/show`, {
+    headers: { ...headers, Authorization: token }
+  }).then(res => res.json());
+};
+
+const logout = () => {
+  localStorage.clear("token");
+  this.props.history.push("/");
+};
 
 export default {
   login,
-  getCurrentUser
+  getCurrentUser,
+  logout
 };

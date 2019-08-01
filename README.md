@@ -10,7 +10,7 @@ Joining the existing backend to this new frontend, which will have the same func
 1. Reorganised the file structure with folders for components, pages and services
 1. Created handlers for the login form, connected to database.
 1. Redirect from login page to the album page if login successful (using router props)
-1. TODO: Fetch user's albums from database, display on albums page
+1. Fetch user's albums from database, displayed titles on albums page
 1. TODO: Implement logout
 
 ---

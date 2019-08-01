@@ -7,21 +7,21 @@ import Signup from "./components/Signup";
 import AlbumsPage from "./pages/albums/AlbumsPage";
 import Topics from "./components/Topics";
 
-// homepage looks like random background, has header with login/signup clickable links
+// homepage looks like random background
+// header with login/signup clickable links
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Header />
-
+    <>
+      <Router>
+      <Header />
         <Route exact path="/" component={Home} />
         <Route path="/login" render={props => <LoginPage {...props} />} />
         <Route path="/signup" component={Signup} />
         <AuthenticatedRoute path="/albums" component={AlbumsPage} />
         <Route path="/topics" component={Topics} />
-      </div>
-    </Router>
+      </Router>
+    </>
   );
 }
 
