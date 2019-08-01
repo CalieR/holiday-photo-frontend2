@@ -10,14 +10,9 @@ function Header() {
       <li>
         <Link to="/login">Login</Link>
       </li>
-      <li>
-        <Link to="/signup">Signup</Link>
-      </li>
-      <li>
-        <Link to="/topics">Topics</Link>
-      </li>
     </ul>
   );
 }
 
 export default Header;
+

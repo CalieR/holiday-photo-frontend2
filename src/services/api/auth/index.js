@@ -15,10 +15,12 @@ const login = (username, password) => {
 };
 
 const getCurrentUser = token => {
-    return fetch(`${API_BASE_URL}/auth/show`, {
-      headers: { ...headers, Authorization: token }
-    }).then(res => res.json());
-  };
+  return fetch(`${API_BASE_URL}/auth/show`, {
+    headers: { ...headers, Authorization: token }
+  }).then(res => res.json());
+};
+
+
 
 export default {
   login,
