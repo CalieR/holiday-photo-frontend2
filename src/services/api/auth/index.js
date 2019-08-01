@@ -20,13 +20,9 @@ const getCurrentUser = token => {
   }).then(res => res.json());
 };
 
-const logout = () => {
-  localStorage.clear("token");
-  this.props.history.push("/");
-};
+
 
 export default {
   login,
-  getCurrentUser,
-  logout
+  getCurrentUser
 };

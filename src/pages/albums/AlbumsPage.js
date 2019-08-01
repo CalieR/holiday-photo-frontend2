@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Albums from "../../components/Albums";
+import Logout from "../../components/Logout";
 import index from "../../services/api/user/index";
 
 class AlbumsPage extends Component {
@@ -20,7 +21,12 @@ class AlbumsPage extends Component {
   };
 
   render() {
-    return <Albums myAlbums={this.state.myAlbums}/>;
+    return (
+      <>
+        <Albums myAlbums={this.state.myAlbums} />;
+        <Logout />
+      </>
+    );
   }
 }
 
