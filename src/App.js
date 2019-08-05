@@ -49,19 +49,3 @@ const AuthenticatedRoute = ({ component: Component, ...rest }) => (
 
 export default App;
 
-// function App() {
-//   return (
-//     <>
-//       <Router>
-//       <Header />
-//         <Route exact path="/" component={Home} />
-//         <Route path="/login" render={props => <LoginPage {...props} />} />
-//         <Route path="/signup" component={Signup} />
-//         <AuthenticatedRoute path="/albums" component={AlbumsPage} />
-//         <Route path="/topics" component={Topics} />
-//       </Router>
-//     </>
-//   );
-// }
-
-// export default App;

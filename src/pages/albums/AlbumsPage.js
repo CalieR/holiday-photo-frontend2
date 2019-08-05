@@ -21,9 +21,11 @@ class AlbumsPage extends Component {
   };
 
   render() {
+    const { myAlbums } = this.state;
+
     return (
       <>
-        <Albums myAlbums={this.state.myAlbums} />;
+        <Albums myAlbums={myAlbums} />
         <Logout />
       </>
     );

@@ -12,6 +12,8 @@ Joining the existing backend to this new frontend, which will have the same func
 1. Redirect from login page to the album page if login successful (using router props)
 1. Fetch user's albums from database, displayed titles on albums page
 1. Implemented logout button which redirects to home
+1. TODO: Build out first set of nested routes eg localhost:3000/albums/Golf
+
 
 ---
 
