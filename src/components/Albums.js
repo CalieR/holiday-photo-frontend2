@@ -18,7 +18,10 @@ function Albums(props) {
       </div>
       <div className="albumTabs">
         <Switch>
-          <Route path="/albums/:id" render={({ match }) => <AlbumPage {...props} />} />
+          <Route
+            path="/albums/:id"
+            render={({ match }) => <AlbumPage albumId={match.params.id} />}
+          />
         </Switch>
       </div>
       {/* {props.myAlbums.map(album => (
