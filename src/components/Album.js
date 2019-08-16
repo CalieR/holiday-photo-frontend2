@@ -1,6 +1,12 @@
 import React from "react";
 
-function Album({match}) {
-  return <h2>A list of the photos in this album</h2>;
+function Album(props) {
+  return (
+    <>
+      <h4>{props.photo.title}</h4>
+      <img src={props.photo.image_url} alt={props.photo.description} width="200" ></img>
+    </>
+
+  );
 }
 export default Album;

@@ -4,7 +4,6 @@ import { Switch, Route, Link } from "react-router-dom";
 import AlbumPage from "../pages/album/AlbumPage";
 
 function Albums(props) {
-  // const path = props.match;
 
   return (
     <>
@@ -24,9 +23,7 @@ function Albums(props) {
           />
         </Switch>
       </div>
-      {/* {props.myAlbums.map(album => (
-        <p key={album.id}>{album.name}</p>
-      ))} */}
+     
     </>
   );
 }
