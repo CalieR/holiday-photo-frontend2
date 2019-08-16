@@ -10,9 +10,6 @@ import Home from "./components/Home";
 import LoginPage from "./pages/login/LoginPage";
 import AlbumsPage from "./pages/albums/AlbumsPage";
 
-// homepage looks like random background
-// header with login/signup clickable links
-
 class App extends Component {
   render() {
     return (
