@@ -1,5 +1,7 @@
 import React from "react";
 
+// either the title or the thumbnail should be clickable, routing to large image
+
 function Album(props) {
   return (
     <>

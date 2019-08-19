@@ -23,7 +23,7 @@ function Albums(props) {
           />
         </Switch>
       </div>
-     
+
     </>
   );
 }
@@ -31,3 +31,5 @@ function Albums(props) {
 // if you click on an album name, it should render the album page with a list of photos.
 
 export default Albums;
+
+
