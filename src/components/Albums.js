@@ -4,7 +4,6 @@ import { Switch, Route, Link } from "react-router-dom";
 import AlbumPage from "../pages/album/AlbumPage";
 
 function Albums(props) {
-  // const path = props.match;
 
   return (
     <>
@@ -24,9 +23,7 @@ function Albums(props) {
           />
         </Switch>
       </div>
-      {/* {props.myAlbums.map(album => (
-        <p key={album.id}>{album.name}</p>
-      ))} */}
+
     </>
   );
 }
@@ -34,3 +31,5 @@ function Albums(props) {
 // if you click on an album name, it should render the album page with a list of photos.
 
 export default Albums;
+
+

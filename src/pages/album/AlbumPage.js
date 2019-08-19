@@ -14,14 +14,27 @@ class AlbumPage extends Component {
   }
 
   getAlbumPhotos = albumId => {
-    index.getAlbumPhotos(albumId);
+    index.getAlbumPhotos(albumId).then(data => {
+      this.setState({
+        albumPhotos: data.album.photos
+      })
+    })
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.albumId !== prevProps.albumId) {
+      this.getAlbumPhotos(this.props.albumId)
+    }
   }
 
   render() {
     return (
       <>
         <h2>Render the contents of an album in here</h2>
-        <Album albumPhotos={this.state.albumPhotos} />
+        {this.state.albumPhotos.map(photo => (
+          <Album key={photo.id} photo={photo} />)
+        )}
+
       </>
     );
   }
